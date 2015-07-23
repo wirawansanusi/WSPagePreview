@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "WSPagePreview"
-  s.version          = "1.0.17"
+  s.version          = "1.0.19"
   s.summary          = "WSPagePreview lets you to create a customisable page preview with additional options like page size, margin and font size."
   s.description      = "Create a customizable page preview without any trouble!
                         Supports :
