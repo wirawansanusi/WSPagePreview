@@ -7,7 +7,7 @@
 
 ## Introduction
 
-![alt text](http://i.imgur.com/itoc7vn.png "WSPagePreview-1")![alt text](http://i.imgur.com/8pql1hq.png "WSPagePreview-2")![alt text](http://i.imgur.com/vP4W7gE.png "WSPagePreview-3")
+![alt text](http://i.imgur.com/qdndBZq.png "WSPagePreview-1")![alt text](http://i.imgur.com/VPPARlx.png "WSPagePreview-2")![alt text](http://i.imgur.com/H5h6Qu1.png "WSPagePreview-3")
 
 WSPagePreview lets you to create a customizable page preview with additional options like page size, margin and font size.
 

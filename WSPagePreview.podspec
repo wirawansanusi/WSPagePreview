@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
                         - Storyboard
                         - iOS 7.0+"
   s.homepage         = "https://github.com/wirawansanusi/WSPagePreview"
-  s.screenshots     = "http://i.imgur.com/itoc7vn.png", "http://i.imgur.com/8pql1hq.png", "http://i.imgur.com/vP4W7gE.png"
+  s.screenshots     = "http://i.imgur.com/qdndBZq.png", "http://i.imgur.com/VPPARlx.png", "http://i.imgur.com/H5h6Qu1.png"
   s.license          = 'Apache-2.0'
   s.author           = { "wirawansanusi" => "kucingsunter@gmail.com" }
   s.source           = { :git => "https://github.com/wirawansanusi/WSPagePreview.git", :tag => s.version.to_s }
