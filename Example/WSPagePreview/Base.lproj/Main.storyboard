@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G1H-Wi-frp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WSPagePreview-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="ViewController" customModule="WSPagePreview_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,88 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JqM-ec-TD0">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JqM-ec-TD0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="3pO-p0-Yqx">
+                                <variation key="heightClass=regular-widthClass=compact" constant="64"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="JqM-ec-TD0" secondAttribute="trailing" constant="-16" id="MNZ-FG-PHf"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="JqM-ec-TD0" secondAttribute="bottom" id="odl-TM-EOW"/>
+                            <constraint firstItem="JqM-ec-TD0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="s4Z-DI-x7m"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="JqM-ec-TD0"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3pO-p0-Yqx"/>
+                                <exclude reference="MNZ-FG-PHf"/>
+                                <exclude reference="s4Z-DI-x7m"/>
+                                <exclude reference="odl-TM-EOW"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="JqM-ec-TD0"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3pO-p0-Yqx"/>
+                                <include reference="MNZ-FG-PHf"/>
+                                <include reference="s4Z-DI-x7m"/>
+                                <include reference="odl-TM-EOW"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="WSPagePreview" id="5BP-Hc-yPy"/>
+                    <connections>
+                        <outlet property="scrollView" destination="JqM-ec-TD0" id="EsB-LX-uai"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1651.5" y="-226.5"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="FO4-bu-4rn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k4Q-C9-Wsm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="tk8-aq-3CY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rds-ik-9Yy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="0zM-RE-dk5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PlS-ox-diy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937.5" y="-226.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cIR-mz-VFW">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="G1H-Wi-frp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Gtj-um-THr">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="k4Q-C9-Wsm" kind="relationship" relationship="viewControllers" id="03G-ag-Neu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7H4-gC-1mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220.5" y="-226.5"/>
         </scene>
     </scenes>
 </document>

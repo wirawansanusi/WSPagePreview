@@ -5,11 +5,17 @@
 [![License](https://img.shields.io/cocoapods/l/WSPagePreview.svg?style=flat)](http://cocoapods.org/pods/WSPagePreview)
 [![Platform](https://img.shields.io/cocoapods/p/WSPagePreview.svg?style=flat)](http://cocoapods.org/pods/WSPagePreview)
 
+## Introduction
+
+WSPagePreview lets you to create a customizable page preview with additional options like page size, margin and font size.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+iOS 7.0+
 
 ## Installation
 
@@ -20,10 +26,87 @@ it, simply add the following line to your Podfile:
 pod "WSPagePreview"
 ```
 
+## How to use
+
+1. Create and link IBOutlet scrollView and var WSPagePreview
+```
+@IBOutlet weak var scrollView: UIScrollView!
+var pagePreview: WSPagePreview?
+```
+2. Inside viewDidLoad function, init and add a delegate (don't forget to include WSPagePreviewDelegate)
+```
+// Convenience init with default settings (Paper size: A4, Margin: 0 cm)
+pagePreview = WSPagePreview()
+
+// Default init requires you to specify the paper size and page margin
+// pagePreview = WSPagePreview(pageSize: CGSize, pageMargin: UIEdgeInsets, fontSize: CGFloat)
+
+pagePreview?.delegate = self
+```
+
+3. Implement this delegate method
+```
+func WSPagePreviewSetTextContent(pagePreview: WSPagePreview) -> String {
+    
+    // Do your text processing here
+
+    return text
+}
+```
+4. Done! or do you want more? See the customize page option below!
+
+##### (Optional) Customize Page Option
+
+To show a page control
+```
+func WSPagePreviewShowPageControl(pagePreview: WSPagePreview, pageControl: UIPageControl) {
+
+    // Do your page control styling here
+    ...
+
+    view.addSubview(pageControl)
+}
+```
+
+To set custom margin
+```
+let margin = UIEdgeInsetsMake(20.0, 20.0, 20.0, 20.0)
+pagePreview?.setPageMargin(margin)
+```
+
+To set custom horizontal margin
+```
+pagePreview?.setPageMarginHorizontally(20.0, right: 20.0)
+```
+
+To set custom vertical margin
+```
+pagePreview?.setPageMarginVertically(20.0, bottom: 20.0)
+```
+
+To set custom page size
+```
+let size = CGSize(width: 500.0, height: 500.0)
+pagePreview?.setPageSize(size)
+```
+
+To set custom font size
+```
+pagePreview?.setFontSize(14.0)
+```
+*Psstt! WSPagePreview automatically adjust the font size based on paper size so you don't have to worry about that, you're welcome!
+
+## Unknown behavior / bug
+
+- Size classes besides iphone (Not tested yet)
+- Programmatically scrollView (Not tested yet)
+- Landscape mode (Not working)
+- ...? 
+
 ## Author
 
-wirawan-syscli, wirawan@syscli.co.jp
+wirawan-syscli, wirawan@syscli.co.jp (http://www.wirawansanusi.com)
 
 ## License
 
-WSPagePreview is available under the MIT license. See the LICENSE file for more info.
+WSPagePreview is available under the Apache License 2.0 (Apache-2.0). See the LICENSE file for more info.

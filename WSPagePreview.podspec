@@ -9,30 +9,22 @@
 
 Pod::Spec.new do |s|
   s.name             = "WSPagePreview"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of WSPagePreview."
-  s.description      = <<-DESC
-                       An optional longer description of WSPagePreview
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/WSPagePreview"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
+  s.version          = "1.0.0"
+  s.summary          = "WSPagePreview lets you to create a customizable page preview with additional options like page size, margin and font size."
+  s.description      = "Create a customizable page preview without any trouble!
+                        Supports :
+                        - Auto Layout
+                        - Storyboard
+                        - iOS 8.0+"
+  s.homepage         = "https://github.com/wirawan-syscli/WSPagePreview"
+  s.screenshots     = "http://i.imgur.com/itoc7vn.png", "http://i.imgur.com/8pql1hq.png", "http://i.imgur.com/vP4W7gE.png"
+  s.license          = 'Apache-2.0'
   s.author           = { "wirawan-syscli" => "wirawan@syscli.co.jp" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/WSPagePreview.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/wirawan-syscli/WSPagePreview.git", :tag => s.version.to_s }
+  s.social_media_url = 'http://www.wirawansanusi.com/'
 
-  s.platform     = :ios, '8.0'
+  s.platform     = :ios, '7.0'
   s.requires_arc = true
-
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'WSPagePreview' => ['Pod/Assets/*.png']
-  }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.resource_bundles = { 'WSPagePreview' => ['Pod/Assets/*.png'] }
 end
