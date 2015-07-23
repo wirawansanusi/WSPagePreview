@@ -35,7 +35,7 @@ pod "WSPagePreview"
 @IBOutlet weak var scrollView: UIScrollView!
 var pagePreview: WSPagePreview?
 ```
-2) Inside viewDidLoad function, init and add a delegate (don't forget to include WSPagePreviewDelegate)
+2) Inside **viewDidLoad** function, init and add a delegate (don't forget to include WSPagePreviewDelegate)
 ```swift
 // Convenience init with default settings (Paper size: A4, Margin: 0 cm)
 pagePreview = WSPagePreview()
@@ -45,7 +45,11 @@ pagePreview = WSPagePreview()
 
 pagePreview?.delegate = self
 ```
-3) Implement this delegate method
+3) Inside **viewDidLayoutSubviews** function, call the *initDefaultSettings(UIScrollView)*
+```swift
+pagePreview?.initDefaultSettings(scrollView)
+```
+4) Implement this delegate method
 ```swift
 func WSPagePreviewSetTextContent(pagePreview: WSPagePreview) -> String {
     
@@ -54,9 +58,11 @@ func WSPagePreviewSetTextContent(pagePreview: WSPagePreview) -> String {
     return text
 }
 ```
-4) Done! or do you want more? See the customize page option below!
+5) Done! or do you want more? See the customize page option below!
 
 ### (Optional) Customize Page Option
+
+In case you need to customize some properties to adjust with your preferences, you can use this helpful method! Ideally, you should call all of this available function right after *initDefaultSettings(UIScrollView)* inside the **viewDidLayoutSubviews** function.
 
 ####To show a page control
 ```swift
