@@ -7,7 +7,7 @@
 
 ## Introduction
 
-![alt text](http://i.imgur.com/qdndBZq.png "WSPagePreview-1")![alt text](http://i.imgur.com/VPPARlx.png "WSPagePreview-2")![alt text](http://i.imgur.com/H5h6Qu1.png "WSPagePreview-3")
+![alt text](http://i.imgur.com/qdndBZq.png "WSPagePreview-1") ![alt text](http://i.imgur.com/VPPARlx.png "WSPagePreview-2") ![alt text](http://i.imgur.com/H5h6Qu1.png "WSPagePreview-3")
 
 WSPagePreview lets you to create a customizable page preview with additional options like page size, margin and font size.
 
@@ -58,7 +58,7 @@ func WSPagePreviewSetTextContent(pagePreview: WSPagePreview) -> String {
 
 ### (Optional) Customize Page Option
 
-To show a page control
+####To show a page control
 ```swift
 func WSPagePreviewShowPageControl(pagePreview: WSPagePreview, pageControl: UIPageControl) {
 
@@ -69,29 +69,29 @@ func WSPagePreviewShowPageControl(pagePreview: WSPagePreview, pageControl: UIPag
 }
 ```
 
-To set custom margin
+####To set custom margin
 ```swift
 let margin = UIEdgeInsetsMake(20.0, 20.0, 20.0, 20.0)
 pagePreview?.setPageMargin(margin)
 ```
 
-To set custom horizontal margin
+####To set custom horizontal margin
 ```swift
 pagePreview?.setPageMarginHorizontally(20.0, right: 20.0)
 ```
 
-To set custom vertical margin
+####To set custom vertical margin
 ```swift
 pagePreview?.setPageMarginVertically(20.0, bottom: 20.0)
 ```
 
-To set custom page size
+####To set custom page size
 ```swift
 let size = CGSize(width: 500.0, height: 500.0)
 pagePreview?.setPageSize(size)
 ```
 
-To set custom font size
+####To set custom font size
 ```swift
 pagePreview?.setFontSize(14.0)
 ```
