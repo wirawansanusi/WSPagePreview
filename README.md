@@ -29,12 +29,12 @@ pod "WSPagePreview"
 ## How to use
 
 1. Create and link IBOutlet scrollView and var WSPagePreview
-```
+```swift
 @IBOutlet weak var scrollView: UIScrollView!
 var pagePreview: WSPagePreview?
 ```
 2. Inside viewDidLoad function, init and add a delegate (don't forget to include WSPagePreviewDelegate)
-```
+```swift
 // Convenience init with default settings (Paper size: A4, Margin: 0 cm)
 pagePreview = WSPagePreview()
 
@@ -43,19 +43,18 @@ pagePreview = WSPagePreview()
 
 pagePreview?.delegate = self
 ```
-
 3. Implement this delegate method
-```
+```swift
 func WSPagePreviewSetTextContent(pagePreview: WSPagePreview) -> String {
     
     // Do your text processing here
 
     return text
 }
-```
+```swift
 4. Done! or do you want more? See the customize page option below!
 
-##### (Optional) Customize Page Option
+### (Optional) Customize Page Option
 
 To show a page control
 ```
@@ -69,29 +68,29 @@ func WSPagePreviewShowPageControl(pagePreview: WSPagePreview, pageControl: UIPag
 ```
 
 To set custom margin
-```
+```swift
 let margin = UIEdgeInsetsMake(20.0, 20.0, 20.0, 20.0)
 pagePreview?.setPageMargin(margin)
 ```
 
 To set custom horizontal margin
-```
+```swift
 pagePreview?.setPageMarginHorizontally(20.0, right: 20.0)
 ```
 
 To set custom vertical margin
-```
+```swift
 pagePreview?.setPageMarginVertically(20.0, bottom: 20.0)
 ```
 
 To set custom page size
-```
+```swift
 let size = CGSize(width: 500.0, height: 500.0)
 pagePreview?.setPageSize(size)
 ```
 
 To set custom font size
-```
+```swift
 pagePreview?.setFontSize(14.0)
 ```
 *Psstt! WSPagePreview automatically adjust the font size based on paper size so you don't have to worry about that, you're welcome!
@@ -105,7 +104,7 @@ pagePreview?.setFontSize(14.0)
 
 ## Author
 
-wirawan-syscli, wirawan@syscli.co.jp (http://www.wirawansanusi.com)
+Wirawan Sanusi, kucingsunter@gmail.com (http://www.wirawansanusi.com)
 
 ## License
 

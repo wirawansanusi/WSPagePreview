@@ -10,20 +10,20 @@
 Pod::Spec.new do |s|
   s.name             = "WSPagePreview"
   s.version          = "1.0.0"
-  s.summary          = "WSPagePreview lets you to create a customizable page preview with additional options like page size, margin and font size."
+  s.summary          = "WSPagePreview lets you to create a customisable page preview with additional options like page size, margin and font size."
   s.description      = "Create a customizable page preview without any trouble!
                         Supports :
                         - Auto Layout
                         - Storyboard
-                        - iOS 8.0+"
-  s.homepage         = "https://github.com/wirawan-syscli/WSPagePreview"
+                        - iOS 7.0+"
+  s.homepage         = "https://github.com/wirawansanusi/WSPagePreview"
   s.screenshots     = "http://i.imgur.com/itoc7vn.png", "http://i.imgur.com/8pql1hq.png", "http://i.imgur.com/vP4W7gE.png"
   s.license          = 'Apache-2.0'
-  s.author           = { "wirawan-syscli" => "wirawan@syscli.co.jp" }
-  s.source           = { :git => "https://github.com/wirawan-syscli/WSPagePreview.git", :tag => s.version.to_s }
+  s.author           = { "wirawansanusi" => "kucingsunter@gmail.com" }
+  s.source           = { :git => "https://github.com/wirawansanusi/WSPagePreview.git", :tag => s.version.to_s }
   s.social_media_url = 'http://www.wirawansanusi.com/'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = { 'WSPagePreview' => ['Pod/Assets/*.png'] }
